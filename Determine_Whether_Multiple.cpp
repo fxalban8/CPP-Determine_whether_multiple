@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <limits>
 using namespace std;
 
 string determineMultiple(int x, int y);
@@ -30,4 +31,13 @@ string determineMultiple(int x,int y){
 	}
 	return result;
 
+}
+
+void controlInput(int& n){
+
+	cin.clear();
+	cin.ignore(numeric_limits<streamsize>::max());
+
+	cout<<"Enter a valid number: "<<flush;
+	cin>>n;
 }
