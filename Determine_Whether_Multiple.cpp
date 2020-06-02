@@ -15,3 +15,12 @@ int main() {
 
 	return 0;
 }
+
+string determineMultiple(int x,int y){
+	if(x%y==0){
+		return x+"is multiple"+"of "+y;
+	}else{
+		return x+"is NOT multiple of "+y;
+	}
+
+}
