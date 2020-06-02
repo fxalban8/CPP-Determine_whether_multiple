@@ -3,6 +3,8 @@
 using namespace std;
 
 string determineMultiple(int x, int y);
+void controlInput(int& n);
+
 
 int main() {
 	int n,m;
