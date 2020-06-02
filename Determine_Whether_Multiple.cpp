@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string>
 using namespace std;
 
 string determineMultiple(int x, int y);
@@ -11,16 +12,20 @@ int main() {
 
 	cout<<"Enter another number: "<<flush;
 	cin>>m;
-
+	
+	cout<<determineMultiple(n,m)<<endl;
 
 	return 0;
 }
 
 string determineMultiple(int x,int y){
+	
+	string result="";
 	if(x%y==0){
-		return x+"is multiple"+"of "+y;
+		result= to_string(x)+" is multiple of "+to_string(y);
 	}else{
-		return x+"is NOT multiple of "+y;
+		result= to_string(x)+" is NOT multiple of "+to_string(y);
 	}
+	return result;
 
 }
