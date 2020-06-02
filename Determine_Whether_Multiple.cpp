@@ -12,10 +12,19 @@ int main() {
 	
 	cout<<"Enter one number: "<<flush;
 	cin>>n;
+	
+	
+	while(!cin){
+		controlInput(n);
+	}
 
 	cout<<"Enter another number: "<<flush;
 	cin>>m;
 	
+	while(!cin){
+		controlInput(m);
+	}
+
 	cout<<determineMultiple(n,m)<<endl;
 
 	return 0;
@@ -36,7 +45,7 @@ string determineMultiple(int x,int y){
 void controlInput(int& n){
 
 	cin.clear();
-	cin.ignore(numeric_limits<streamsize>::max());
+	cin.ignore(numeric_limits<streamsize>::max(),'\n');
 
 	cout<<"Enter a valid number: "<<flush;
 	cin>>n;
